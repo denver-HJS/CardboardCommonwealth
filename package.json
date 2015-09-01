@@ -1,0 +1,45 @@
+{
+  "name": "cardboardcommonwealth",
+  "version": "1.0.0",
+  "description": "packages for CC project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "angular": "^1.4.5",
+    "bootstrap-sass": "^3.3.5",
+    "browserify": "^11.0.1",
+    "connect-livereload": "^0.5.3",
+    "express": "^4.13.3",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-util": "^3.0.6",
+    "jquery": "^2.1.4",
+    "jshint-stylish": "^2.0.1",
+    "tiny-lr": "^0.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denver-HJS/CardboardCommonwealth.git"
+  },
+  "keywords": [
+    "cardboard",
+    "commonwealth"
+  ],
+  "author": "Denver Bohling",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/denver-HJS/CardboardCommonwealth/issues"
+  },
+  "homepage": "https://github.com/denver-HJS/CardboardCommonwealth#readme"
+}
