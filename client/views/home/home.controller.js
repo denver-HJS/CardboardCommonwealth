@@ -5,17 +5,18 @@
   angular.module('cardboardCommonwealth')
     .controller(controllerId, HomeCtrl);
 
-  console.log("Made it this far");
-  HomeCtrl.$inject = ['$log'];
-  console.log("Made it past injection");
+  HomeCtrl.$inject = ['$log','$mdSidenav'];
 
-  function HomeCtrl($log) {
-    console.log("Made to constructor");
+  function HomeCtrl($log, $mdSidenav) {
     var vm = this;
 
     angular.extend(vm, {
       name: 'HomeCtrl'
     });
+
+    vm.toggleSidenav = function(menuId) {
+      $mdSidenav(menuId).toggle();
+    };
 
     $log.info(controllerId + " set up complete.");
   }
