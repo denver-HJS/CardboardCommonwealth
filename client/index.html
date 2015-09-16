@@ -41,10 +41,10 @@
       </div>
       <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
         <md-tab id="tab1" aria-controls="tab1-content">
-          Latest
+          Home
         </md-tab>
         <md-tab id="tab2" aria-controls="tab2-content">
-          Favorites
+          About
         </md-tab>
       </md-tabs>
     </md-toolbar>
@@ -72,7 +72,7 @@
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
           <md-list>
             <md-item>
-              <a>
+              <a href="/">
                 <md-item-content md-ink-ripple layout="row" layout-align="start center">
                   <div class="inset">
                     <ng-md-icon icon="home"></ng-md-icon>
@@ -83,12 +83,12 @@
             </md-item>
             <md-divider></md-divider>
             <md-item>
-              <a>
+              <a href="/about">
                 <md-item-content md-ink-ripple layout="row" layout-align="start center">
                   <div class="inset">
                     <ng-md-icon icon="tag_faces"></ng-md-icon>
                   </div>
-                  <div class="inset">About Us</div>
+                  <div class="inset">About</div>
                 </md-item-content>
               </a>
             </md-item>
@@ -119,6 +119,8 @@
     <script src="app.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/home/home.controller.js"></script>
+    <script src="views/about/about.js"></script>
+    <script src="views/about/about.controller.js"></script>
     <!-- endinject -->
 
     <!-- endbuild -->
