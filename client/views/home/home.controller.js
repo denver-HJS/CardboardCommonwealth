@@ -11,7 +11,7 @@
     var vm = this;
 
     angular.extend(vm, {
-      name: 'HomeCtrl'
+      pageHeading: 'Cardboard Commonwealth'
     });
 
     vm.toggleSidenav = function(menuId) {
