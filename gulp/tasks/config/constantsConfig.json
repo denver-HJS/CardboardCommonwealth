@@ -1,0 +1,11 @@
+{
+  "development": {
+  },
+  "production": {
+  },
+  "env_independent": {
+    "CODE_CONSTANTS": {
+
+    }
+  }
+}

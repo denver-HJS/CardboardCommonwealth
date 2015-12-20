@@ -1,0 +1,12 @@
+{
+  "name": "cardboardcommonwealth",
+  "description": "Cardboard Commonwealth",
+  "version": "0.0.1",
+  "homepage": "https://github.com/denver-HJS/CardboardCommonwealth#readme",
+  "license": "AGPL-3.0",
+  "private": true,
+  "dependencies": {
+    "angular-slip": "~1.0.5"
+  },
+  "devDependencies": {}
+}
