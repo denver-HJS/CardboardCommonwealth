@@ -6,7 +6,6 @@
   var _ = require('lodash');
   require('angular-material');
   require('angular-ui-router');
-  require('angular-touch');
   require('angular-messages');
   require('angular-animate');
   require('angular-aria');
@@ -21,7 +20,7 @@
 
 
 
-  const ngModule = angular.module('ccApp', ['ui.router', 'ngMaterial', 'ngMdIcons', 'ngResource', 'ngTouch', 'ngSanitize',
+  const ngModule = angular.module('ccApp', ['ui.router', 'ngMaterial', 'ngMdIcons', 'ngResource', 'ngSanitize',
       'ngMessages', 'ngAria', 'slip', 'ccApp.constants']);
 
   ngModule
@@ -34,7 +33,10 @@
         /* BEGIN COLOR THEMES */
         $mdThemingProvider.theme('default')
           .primaryPalette('amber')
-          .accentPalette('light-blue');
+          .accentPalette('light-blue')
+          .backgroundPalette('grey', {
+              'default': '200'
+          });
         /* END COLOR THEMES */
 
         /* BEGIN UI ROUTER STATES */
@@ -55,7 +57,24 @@
               }
             },
             data: {
-                toolbarClass: "inspect",
+                toolbarClass: "home",
+                rootState: true
+            }
+          })
+          .state('aboutus', {
+            url: '/aboutus',
+            views: {
+              '': {
+                templateUrl: 'partials/aboutus/index.html',
+                controller: 'aboutUsController as vm'
+              },
+              'navbar': {
+                templateUrl: 'partials/nav/index.html',
+                controller: 'sideNavController as nav'
+              }
+            },
+            data: {
+                toolbarClass: "home",
                 rootState: true
             }
           });
@@ -107,6 +126,7 @@
     require('./components/shared/ccUtils')(ngModule);
     require('./components/shared/user')(ngModule);
     require('./partials/home')(ngModule);
+    require('./partials/aboutUs')(ngModule);
     require('./partials/nav')(ngModule);
     require('./partials/dialogs')(ngModule);
 

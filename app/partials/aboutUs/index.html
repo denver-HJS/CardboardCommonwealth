@@ -1,0 +1,41 @@
+<div id="aboutus-index">
+  <cc-header data-title="About Us">
+    <span flex></span>
+  </cc-header>
+  <div class="spacetop-1" layout="row" layout-align="center center">
+    <div layout="column" flex-xs="100" flex-sm="80" flex-md="60" flex-gt-md="65" layout-align="center center">
+      <div class="intro-box md-whiteframe-7dp" layout="column" layout-align="center center">
+        <div class="intro-content">
+          <p>
+            Cardboard Commonwealth is a record label for the truly creatives.
+            If you've ever needed bust out that tune that's been stuck on your head for days
+            but don't have the equipment to spawn that earworm, then we're the place for you.
+            We offer a cheap (as in well, free) service for laying these PH-phat tracks down.
+          </p>
+          <p>
+            Here at Cardboard Commonwealth we strive to foster a community of artists.
+            It's always been about the music and the power it has to speak to us on an
+            individual en masse. It's with that in mind we spend the time, energy, and
+            effort to compile professional quality recordings for deserving artists who
+            could otherwise be spending that money on delicious pizza. (Yes, we're
+            talking about YOU!)
+          </p>
+        </div>
+        <div flex="initial">
+          <img src="images/uncle_same.jpg" alt="Uncle Sam" />
+        </div>
+      </div>
+      <div ng-repeat="member in vm._staff" class="staff-box spacetop-2 md-whiteframe-7dp" layout="row" layout-wrap>
+        <img ng-src="images/{{member.photo_src}}" flex-gt-xs="initial" flex-xs="100" />
+        <div class="bio-content" layout="column" flex-auto>
+          <div layout="row">
+            <md-icon md-font-set="material-icons">person</md-icon>
+            <span class="md-headline">{{member.name}}: {{member.staff_title}}</span>
+          </div>
+          <md-divider class="bio-divider"></md-divider>
+          <p>{{member.bio}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

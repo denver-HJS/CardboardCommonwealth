@@ -2,6 +2,8 @@
 @import "app/utils/site_variables.scss";
 @import "app/components/header/header.scss";
 @import "app/partials/nav/navDrawer.scss";
+@import "app/partials/home/home.scss";
+@import "app/partials/aboutus/aboutus.scss";
 
 //@import "app/partials/planning/planning.scss"; -- (Denver): this is currently empty and I'm not sure if it will be used
 
@@ -26,7 +28,39 @@ svg {
 }
 
 .text-primary {
-  color: $body-text-dark;
+  color: $md-primary;
+}
+
+.text-primary {
+  color: $md-primary;
+}
+
+.text-primary-1 {
+  color: $md-primary-hue1;
+}
+
+.text-primary-2 {
+  color: $md-primary-hue2;
+}
+
+.text-primary-3 {
+  color: $md-primary-hue3;
+}
+
+.text-accent {
+  color: $md-accent;
+}
+
+.text-accent-1 {
+  color: $md-accent-hue1;
+}
+
+.text-accent-2 {
+  color: $md-accent-hue2;
+}
+
+.text-accent-3 {
+  color: $md-accent-hue3;
 }
 
 .text-error {

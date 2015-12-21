@@ -39,8 +39,11 @@ export default ngModule => {
     }
 
     buildMenuItems() {
-      return [{"displayTitle" : "HOME", "stateRef" : "home"}, {"displayTitle" : "ABOUT US", "stateRef" : "aboutus"},
-        {"displayTitle" : "ARTISTS", "stateRef" : "artists"}];
+      return [
+        {"displayTitle" : "HOME", "stateRef" : "home"},
+        {"displayTitle" : "ARTISTS", "stateRef" : "artists"}, 
+        {"displayTitle" : "ABOUT US", "stateRef" : "aboutus"}
+        ];
     }
 
   }

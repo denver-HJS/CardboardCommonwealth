@@ -1,0 +1,29 @@
+#aboutus-index {
+  .intro-box {
+    background-color: #FFFFFF;
+    .intro-content {
+      padding: 1.5rem;
+    }
+  }
+
+  .staff-box {
+    background-color: $md-primary-hue1;
+
+    .bio-content {
+      padding: 1.5rem;
+
+      md-icon {
+        $icon-size: 2.125rem;
+        color: $md-primary-hue3;
+        font-size: $icon-size;
+        margin: 0 .5rem;
+        width: $icon-size;
+        height: $icon-size;
+      }
+    }
+
+    md-divider.bio-divider {
+      border-top-color: $md-accent-hue3;
+    }
+  }
+}

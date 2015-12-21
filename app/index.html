@@ -34,13 +34,12 @@
 <body ng-app="ccApp" class="ng-scope ng-binding"  layout="column">
     <div layout="row" flex>
       <div ui-view="navbar"></div>
-      <div id="master-page" layout="column" flex>
-          <div class="cc-logo-contain" layout="row" layout-align="center center">
-            <img src="images/cc_logo.png" ui-sref="home"/>
-          </div>
-          <div ui-view></div>
+      <md-content id="master-page" layout="column" flex>
+        <div class="cc-logo-contain" layout="row" layout-align="center center">
+          <img src="images/cc_logo.png" ui-sref="home"/>
         </div>
-
+        <div ui-view></div>
+      </md-content>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

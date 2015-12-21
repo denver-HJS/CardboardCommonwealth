@@ -21,22 +21,6 @@ export default ngModule => {
       vm._persistenceService = persistenceService;
       vm._mappingService = mappingService;
 
-      /**
-       * Saves table settings preferences to SQLite on state change
-       */
-      vm._$state.current.onExit = () => {
-        var vm = this;
-        var serializedColData = angular.toJson(vm.slipListItems);
-        igUtils.setPreference(COL_PREF_TITLE, serializedColData).then(
-          () => {
-            // setting preference was successful
-          },
-          () => {
-            vm._$log.debug(controllerName + "[onExit]: external function SetPreference not found. Column Settings were not saved.");
-          }
-        );
-      };
-
     } //end constructor
 
   }
