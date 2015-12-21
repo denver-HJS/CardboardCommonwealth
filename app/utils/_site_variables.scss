@@ -1,10 +1,23 @@
-$font-base-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-base-family: 'Ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $font-base-size-web: 16px; // Base font size for web browsers
 $font-base-size-tab: 20px; // Base font size for tablets
 
 // APPLICATION COLORS
+$app-red: #EA1212;
 $error-red: #EE2E24;
 $body-text-light: #FFFFFF;
+$body-text-dark: #0A0808;
+
+// THEME COLORS
+$md-primary: #FFC107;
+$md-primary-hue1: #FFF59D;
+$md-primary-hue2: #FFEE58;
+$md-primary-hue3: #F9A825;
+$md-accent: #40C4FF;
+$md-accent-hue1: #81D4FA;
+$md-accent-hue2: #29B6F6;
+$md-accent-hue3: #0277BD;
+
 
 // CONTENT BACKGROUNDS
 $master-bg-color: #DDDDDD;

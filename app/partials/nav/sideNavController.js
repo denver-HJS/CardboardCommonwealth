@@ -8,6 +8,7 @@ export default ngModule => {
       this._$log = $log;
       this._$mdDialog = $mdDialog;
       this._findInput="";
+      this._menuItems = this.buildMenuItems();
     }
 
     scan(ev) {
@@ -35,6 +36,11 @@ export default ngModule => {
 
     onSubmitDialog(sicChanger) {
       this._$mdDialog.hide(sicChanger);
+    }
+
+    buildMenuItems() {
+      return [{"displayTitle" : "HOME", "stateRef" : "home"}, {"displayTitle" : "ABOUT US", "stateRef" : "aboutus"},
+        {"displayTitle" : "ARTISTS", "stateRef" : "artists"}];
     }
 
   }

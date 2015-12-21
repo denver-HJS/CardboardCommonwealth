@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>IG</title>
+  <title>Cardboard Commonwealth</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -18,7 +18,7 @@
   <!-- endbuild -->
 
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic"> -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,400,500,400italic,700,500italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,700,300,300italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- build:css styles/app.css -->
@@ -33,24 +33,11 @@
 </head>
 <body ng-app="ccApp" class="ng-scope ng-binding"  layout="column">
     <div layout="row" flex>
-        <!-- todo:might want to change the sidenav to a directive that way it has a scope of it's own that doesn't get destroyed when ui router changes the view -->
-       <div ng-controller="sideNavController as nav">
-      <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 nav-drawer nav-text" md-component-id="nav" md-is-open="true">
-            <md-item md-no-ink>
-              <a ui-sref="list">
-                <div layout="row">
-                  <div flex="5" class="nav-drawer-li-red"></div>
-                  <md-item-content flex md-ink-ripple>
-                    <div flex="80" class="inset">Home</div>
-                  </md-item-content>
-                </div>
-                </a>
-            </md-item>
-          </md-list>
-
-        </md-sidenav>
-      </div>
+      <div ui-view="navbar"></div>
       <div id="master-page" layout="column" flex>
+          <div class="cc-logo-contain" layout="row" layout-align="center center">
+            <img src="images/cc_logo.png" ui-sref="home"/>
+          </div>
           <div ui-view></div>
         </div>
 

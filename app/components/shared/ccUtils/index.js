@@ -1,5 +1,5 @@
 export default ngModule => {
-  require('./igUtils')(ngModule);
+  require('./ccUtils')(ngModule);
   require('./mappingService')(ngModule);
   require('./persistenceService')(ngModule);
   require('./navigationService')(ngModule);

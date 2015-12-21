@@ -1,2 +1,12 @@
-<div id="nav"></div>
-<!--nav drawer-->
+<div>
+  <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 nav-drawer" md-component-id="side-nav">
+      <md-item ng-repeat="menuItem in nav._menuItems" md-no-ink ui-sref-active="md-primary">
+        <md-item-content flex md-ink-ripple>
+          <div class="inset" ui-sref="{{menuItem.stateRef}}">
+            <md-button class="md-accent md-hue-3 md-flat">{{menuItem.displayTitle}}</md-button>
+          </div>
+        </md-item-content>
+      </md-item>
+    </md-list>
+  </md-sidenav>
+</div>

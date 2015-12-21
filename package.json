@@ -96,7 +96,7 @@
     "angular-cookies": "^1.4.6",
     "angular-datatables": "^0.4.3",
     "angular-loader": "^1.4.6",
-    "angular-material": "^0.11.2",
+    "angular-material": "^1.0.0",
     "angular-material-icons": "^0.6.0",
     "angular-messages": "^1.4.7",
     "angular-resource": "^1.4.6",

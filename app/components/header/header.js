@@ -1,5 +1,5 @@
 export default ngModule => {
-    ngModule.directive('igHeader', () => {
+    ngModule.directive('ccHeader', () => {
         return {
             restrict: 'E',
             scope: {
@@ -8,9 +8,8 @@ export default ngModule => {
               flexVal: '@'
             },
             transclude: true,
-            require: '^inspectionListController',
-            templateUrl: 'components/igHeader/header.html',
-            controller: 'igHeaderController as  igH',
+            templateUrl: 'components/header/header.html',
+            controller: 'ccHeaderController as  ccH',
             compile: compile
         }
     });

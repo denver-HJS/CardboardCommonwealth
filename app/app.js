@@ -25,13 +25,20 @@
       'ngMessages', 'ngAria', 'slip', 'ccApp.constants']);
 
   ngModule
-    .config(function($stateProvider, $urlRouterProvider, $locationProvider, $logProvider,$httpProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $locationProvider, $logProvider,
+      $httpProvider, $mdThemingProvider) {
         $locationProvider.html5Mode(true);
         $logProvider.debugEnabled(true); //false to prevent _$log.debug output
         $httpProvider.defaults.useXDomain = true;
 
-        //
-        // For any unmatched url, redirect to /inspection
+        /* BEGIN COLOR THEMES */
+        $mdThemingProvider.theme('default')
+          .primaryPalette('amber')
+          .accentPalette('light-blue');
+        /* END COLOR THEMES */
+
+        /* BEGIN UI ROUTER STATES */
+        // For any unmatched url, redirect to the home page
         $urlRouterProvider.otherwise("home");
         // Now set up the states
         $stateProvider
@@ -41,6 +48,10 @@
               '': {
                 templateUrl: 'partials/home/index.html',
                 controller: 'homeController as vm'
+              },
+              'navbar': {
+                templateUrl: 'partials/nav/index.html',
+                controller: 'sideNavController as nav'
               }
             },
             data: {
@@ -48,9 +59,10 @@
                 rootState: true
             }
           });
+        /* END UI ROUTER STATES */
     });
 
-    ngModule.run( ($log, $rootScope, $mdDialog, $mdToast, $window, $state, $resource, $q, igUtils, userService,
+    ngModule.run( ($log, $rootScope, $mdDialog, $mdToast, $window, $state, $resource, $q, ccUtils, userService,
                    persistenceService, navigationService) => {
       $log.debug("Running angular module ngModule");
 
@@ -58,7 +70,7 @@
         if(navigationService._pushOrPop && navigationService._pushOrPop=='POP'){
           console.log(navigationService._stateStack);
           navigationService._pushOrPop='';
-        }else{
+        } else{
           navigationService.pushState(toState.name);
         }
       });
@@ -82,15 +94,7 @@
             .hideDelay(_duration)
         );
       };
-
-      $rootScope.close = function(event) {
-        $log.info("Closing application");
-        if (igUtils.isExternalFunc('closeApplication')) {
-          container.closeApplication();
-        }
-        //$window.external.CloseApplication();
-      };
-    }
+    });
 
     ngModule.filter('trustedUrl', function ($sce) {
       return function(url) {
@@ -100,13 +104,9 @@
 
     require('./components/header')(ngModule);
     require('./components/customValidation')(ngModule);
-    require('./components/shared/camera')(ngModule);
-    require('./components/shared/igUtils')(ngModule);
-    require('./components/shared/inspection')(ngModule);
+    require('./components/shared/ccUtils')(ngModule);
     require('./components/shared/user')(ngModule);
-    require('./partials/shipmentDetails')(ngModule);
-    require('./partials/inspectionList')(ngModule);
-    require('./partials/viewPhoto')(ngModule);
+    require('./partials/home')(ngModule);
     require('./partials/nav')(ngModule);
     require('./partials/dialogs')(ngModule);
 
