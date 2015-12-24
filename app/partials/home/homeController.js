@@ -1,5 +1,3 @@
-var _ = require('lodash');
-
 export default ngModule => {
 
   var controllerName = 'homeController';
@@ -7,7 +5,7 @@ export default ngModule => {
   class homeController {
     /*@ngInject*/
     constructor($rootScope, $scope, $log, $state, $timeout, $resource, $window, $q, ccUtils,
-                userService,persistenceService,mappingService)
+                userService,persistenceService,mappingService, SITE_CONTENT)
     {
       // Constructor specific variables
       var vm = this;
@@ -20,8 +18,19 @@ export default ngModule => {
       vm._ccUtils = ccUtils;
       vm._persistenceService = persistenceService;
       vm._mappingService = mappingService;
+      vm._SITE_CONTENT = SITE_CONTENT;
+
+      vm._news_list = vm.buildNewsSrc();
 
     } //end constructor
+
+    buildNewsSrc() {
+      var srcArr = [];
+      angular.forEach(this._SITE_CONTENT.NEWS, (value, idx) => {
+        srcArr.push(value);
+      });
+      return srcArr;
+    }
 
   }
 

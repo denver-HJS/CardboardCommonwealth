@@ -1,0 +1,8 @@
+<div class="content-tile" ng-mouseenter="hovering = true" ng-mouseleave="hovering = false"
+  ng-class="{'md-whiteframe-3dp': hovering == true}">
+    <img ng-src="images/{{tileImg}}" class="tile-img" />
+    <div class="tile-footer">
+      <h3>{{footerText}} <md-icon ng-show="hovering == true"
+        md-font-set="material-icons">{{footerIcon}}</md-icon></h3>
+    </div>
+</div>

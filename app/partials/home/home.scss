@@ -2,4 +2,25 @@
   .featured {
     background-color: $md-primary-hue1;
   }
+
+  .news-content {
+    background-color: #FFFFFF;
+    padding: 1rem;
+
+    .news_thumb {
+      border-radius: 30px;
+      margin: 1.5rem;
+      border: 1px solid $md-primary-hue3;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    md-list-item h3.news-headline {
+      color: $md-accent-hue3;
+
+      &:hover {
+        color: $md-primary-hue3;
+      }
+    }
+  }
 }

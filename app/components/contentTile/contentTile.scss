@@ -1,0 +1,38 @@
+.content-tile {
+  $content-padding: .5;
+  $max-img-width: 400;
+  position: relative;
+  padding: $content-padding + rem;
+  margin: .5rem;
+  background-color: $md-primary;
+
+  .tile-img {
+    cursor: pointer;
+    max-width: $max-img-width + px;
+  }
+
+  .tile-footer {
+    position: absolute;
+    bottom: #{$content-padding + 0.2} + rem;
+    left: #{$content-padding + 0.2} + rem;
+    color: $md-primary-hue3;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.18);
+    padding: .5rem 1rem;
+    md-icon {
+      color: inherit;
+    }
+  }
+
+  &:hover {
+    background-color: $md-accent;
+
+    .tile-img {
+      max-width: #{$max-img-width * 1.10} + px;
+    }
+
+    .tile-footer {
+      color: $md-accent;
+    }
+  }
+}

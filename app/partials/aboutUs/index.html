@@ -1,4 +1,4 @@
-<div id="aboutus-index">
+<div id="aboutus-index" class="page-content-container">
   <cc-header data-title="About Us">
     <span flex></span>
   </cc-header>
@@ -14,7 +14,7 @@
           </p>
           <p>
             Here at Cardboard Commonwealth we strive to foster a community of artists.
-            It's always been about the music and the power it has to speak to us on an
+            It's always been about the music and the power it has to speak to us as an
             individual en masse. It's with that in mind we spend the time, energy, and
             effort to compile professional quality recordings for deserving artists who
             could otherwise be spending that money on delicious pizza. (Yes, we're
@@ -22,8 +22,11 @@
           </p>
         </div>
         <div flex="initial">
-          <img src="images/uncle_same.jpg" alt="Uncle Sam" />
+          <img src="images/uncle_sam.jpg" alt="Uncle Sam" />
         </div>
+      </div>
+      <div class="spacetop-2">
+        <h2>Contributors</h2>
       </div>
       <div ng-repeat="member in vm._staff" class="staff-box spacetop-2 md-whiteframe-7dp" layout="row" layout-wrap>
         <img ng-src="images/{{member.photo_src}}" flex-gt-xs="initial" flex-xs="100" />

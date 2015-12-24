@@ -74,7 +74,24 @@
               }
             },
             data: {
-                toolbarClass: "home",
+                toolbarClass: "aboutus",
+                rootState: true
+            }
+          })
+          .state('artists', {
+            url: '/artists',
+            views: {
+              '': {
+                templateUrl: 'partials/artists/index.html',
+                controller: 'artistsController as vm'
+              },
+              'navbar': {
+                templateUrl: 'partials/nav/index.html',
+                controller: 'sideNavController as nav'
+              }
+            },
+            data: {
+                toolbarClass: "artists",
                 rootState: true
             }
           });
@@ -123,10 +140,12 @@
 
     require('./components/header')(ngModule);
     require('./components/customValidation')(ngModule);
+    require('./components/contentTile')(ngModule);
     require('./components/shared/ccUtils')(ngModule);
     require('./components/shared/user')(ngModule);
     require('./partials/home')(ngModule);
     require('./partials/aboutUs')(ngModule);
+    require('./partials/artists')(ngModule);
     require('./partials/nav')(ngModule);
     require('./partials/dialogs')(ngModule);
 

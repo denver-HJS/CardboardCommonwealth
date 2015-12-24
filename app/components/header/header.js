@@ -15,7 +15,7 @@ export default ngModule => {
     });
 
     function compile(element, attrs, transclude) {
-      if (!attrs.stick || attrs.stick == "true" || attrs.stick == true ) {
+      if (attrs.stick == "true" || attrs.stick == true ) {
         // "Stick" the header to the top using jquery-sticky plugin (Garand)
         $(element[0]).children(":first").sticky({"topSpacing": 0});
       }

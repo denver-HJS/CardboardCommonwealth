@@ -19,6 +19,58 @@
           "bio": "Denver Bohling is a web developer originally from Laramie, WY. He moved here in June 2015 with interests to expand his horizons and explore Portland's budding music scene. Some of his favorite musical effects include heavy fuzz, chorus, and modulated delay. Denver touts a strong interest in shenanigans, grade school-level hijinks, tomfoolery, and general bafoonery."
         }
       ]
+    },
+    "SITE_CONTENT": {
+      "NEWS": [
+        {
+          "headline": "NPR debuts new Foxing",
+          "abstract": "Pretty excited to announce new Foxing full length Dealer will be out October 30, 2015 to kick things off NPR has debuted the first new song from the record...",
+          "content_link": "http://triplecrownrecords.com/news/npr-debuts-new-foxing/",
+          "thumb_img": "http://triplecrownrecords.com/wp-content/themes/triplecrown/img/logo.png"
+        },
+        {
+          "headline": "The Beatles Adding Music to Streaming Services From Tomorrow",
+          "abstract": "The Beatles have long been absent from music streaming services. From tomorrow, their music will finally be available on services such as Spotify, Apple Music, and Tidal.",
+          "content_link": "http://pitchfork.com/news/62650-the-beatles-adding-music-to-streaming-services-from-tomorrow/",
+          "thumb_img": "http://www.lambchop.net/wp-content/uploads/2012/03/Pitchfork-Logo-small.jpg"
+        },
+        {
+          "headline": "17 COVER SONGS BETTER THAN THE ORIGINALS",
+          "abstract": "What is it about the subject that causes people to go from zero to cyberbully in 6.2 seconds? Is it the implication that the original song – the one that’s obviously beloved enough for someone to cover it and for most listeners to instantly recognize it – is somehow diminished by one writer’s opinion?",
+          "content_link": "http://diffuser.fm/cover-songs-better-than-the-originals/?utm_source=zergnet.com&utm_medium=referral&utm_campaign=zergnet_629662",
+          "thumb_img": "http://diffuser.fm/files/2015/11/diffuser1161.png"
+        }
+      ],
+      "ARTISTS": [
+        {
+          "name": "Brendon Mount",
+          "bio": "Mount is a singer/songwriter from Portland, OR. His sound utilizes a folk vocal delivery along with an indie rock blend of auxillary tones.",
+          "band_img": "brendon_mount.jpg",
+          "audio": [
+            {
+              "album_title": "",
+              "album_cover_src": "",
+              "track_title": "",
+              "track_src": "",
+              "track_num": ""
+            }
+          ]
+        },
+        {
+          "name": "Garanzuay",
+          "bio": "Duo from parts unknown set out to create rock music with a piano and drums",
+          "band_img": "garanzuay.jpg",
+          "audio": [
+            {
+              "album_title": "",
+              "album_cover_src": "",
+              "track_title": "",
+              "track_src": "",
+              "track_num": ""
+            }
+          ]
+        }
+      ]
     }
   }
 }

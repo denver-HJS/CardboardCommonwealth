@@ -1,0 +1,10 @@
+<div id="artists-index" class="page-content-container">
+  <cc-header data-title="Artists">
+    <span flex></span>
+  </cc-header>
+  <div class="spacetop-1" layout="row" layout-align="space-around center" layout-wrap>
+    <content-tile ng-repeat="item in vm._artists_list" footer-icon="queue_music" footer-text="item.name"
+      tile-img="{{item.band_img}}">
+    </content-tile>
+  </div>
+</div>
