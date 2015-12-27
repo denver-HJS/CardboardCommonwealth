@@ -11,6 +11,12 @@ export default ngModule =>
       this._$q = $q;
 
     }
+
+    normalizeUrl(urlInput) {
+      var urlOutput = "";
+      urlOutput = urlInput.replace(/ /g, "-").toLowerCase();
+      return urlOutput;
+    }
   }
   ngModule.service(providerName, ccUtils);
 };

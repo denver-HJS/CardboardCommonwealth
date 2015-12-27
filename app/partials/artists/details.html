@@ -1,0 +1,18 @@
+<div layout="row" flex layout-wrap>
+  <div class="content-border-left" flex="5"></div>
+    <div flex flex-sm="90" flex-xs="90" layout="column">
+      <h1>{{vm._selectedArtist.name}}</h1>
+      <img ng-src="images/{{vm._selectedArtist.band_img}}" />
+      <div ng-bind-html="vm._selectedArtist.bio" class="spacetop-2"></div>
+    </div>
+  <div class="content-border-right" flex="5"></div>
+  <div class="content-border-left" flex="5" hide-gt-sm></div>
+  <div class="secondary-content" flex="35" flex-sm="90" flex-xs="90" layout="column">
+    <h2>Releases</h2>
+    <md-divider></md-divider>
+    <h2>Connect</h2>
+    <md-divider></md-divider>
+    <h2>Dates</h2>
+  </div>
+  <div class="content-border-right" flex="5" hide-gt-sm></div>
+</div>

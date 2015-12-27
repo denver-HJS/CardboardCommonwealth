@@ -94,6 +94,23 @@
                 toolbarClass: "artists",
                 rootState: true
             }
+          })
+          .state('artists.details', {
+            url: '/:id',
+            views: {
+              '': {
+                templateUrl: 'partials/artists/details.html',
+                controller: 'artistDtlsController as vm'
+              },
+              'navbar': {
+                templateUrl: 'partials/nav/index.html',
+                controller: 'sideNavController as nav'
+              }
+            },
+            data: {
+                toolbarClass: "artists",
+                rootState: true
+            }
           });
         /* END UI ROUTER STATES */
     });

@@ -2,9 +2,13 @@
   <cc-header data-title="Artists">
     <span flex></span>
   </cc-header>
-  <div class="spacetop-1" layout="row" layout-align="space-around center" layout-wrap>
-    <content-tile ng-repeat="item in vm._artists_list" footer-icon="queue_music" footer-text="item.name"
-      tile-img="{{item.band_img}}">
-    </content-tile>
+  <div class="spacetop-1" layout="row" layout-align="space-around center" layout-wrap
+    ng-show="vm._$state.current.name === 'artists'">
+      <a ui-sref="artists.details({'id' : item.stateRef})" ng-repeat="item in vm._artists_list">
+        <content-tile footer-icon="queue_music" footer-text="item.name" tile-img="{{item.band_img}}">
+        </content-tile>
+      </a>
   </div>
+</div>
+<div id="artist-details-index" ui-view="">
 </div>

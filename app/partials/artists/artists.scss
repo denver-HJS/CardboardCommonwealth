@@ -1,3 +1,19 @@
 #artists-index {
-  
+
+}
+
+#artist-details-index {
+  padding: 0 .5rem;
+  .content-border-left {
+    border-left: 5px solid $md-accent;
+  }
+  .content-border-right {
+    border-right: 5px solid $md-accent;
+  }
+
+  @media screen and (min-width: 961px) {
+    .secondary-content {
+      padding-left: 1rem;
+    }
+  }
 }
