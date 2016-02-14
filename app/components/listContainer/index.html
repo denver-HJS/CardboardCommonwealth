@@ -1,6 +1,6 @@
-<div layout="column" layout-align="start center" flex>
-  <h3 class="listItemTitle">{{title}}</h3>
-  <p class="spacetop-2 listItemText" flex>
+<div layout="column" layout-align="start center" class="list-item-container md-whiteframe-3dp" flex>
+  <div class="list-item-title">{{title}}</div>
+  <div class="list-item-text" flex ng-click="vm.goToPage(srcLink)">
     {{extract}}
-  </p>
+  </div>
 </div>

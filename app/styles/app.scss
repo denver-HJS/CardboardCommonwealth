@@ -1,11 +1,13 @@
 
 @import "app/utils/site_variables.scss";
 @import "app/components/header/header.scss";
+@import "app/components/listContainer/listContainer.scss";
 @import "app/components/contentTile/contentTile.scss";
 @import "app/partials/nav/navDrawer.scss";
 @import "app/partials/home/home.scss";
 @import "app/partials/aboutus/aboutus.scss";
 @import "app/partials/artists/artists.scss";
+@import "app/partials/searchWiki/search.scss";
 
 //@import "app/partials/planning/planning.scss"; -- (Denver): this is currently empty and I'm not sure if it will be used
 
@@ -198,6 +200,14 @@ svg {
 }
 .spacetop-2 {
   margin-top: 2rem;
+}
+
+.spacebot-1 {
+  margin-bottom: 1rem;
+}
+
+.spacebot-2 {
+  margin-bottom: 2rem;
 }
 
 .spaceright-1 {

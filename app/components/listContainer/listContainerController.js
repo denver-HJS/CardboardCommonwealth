@@ -8,8 +8,9 @@ export default ngModule =>
       this._$log = $log;
     }
 
-    generatedFunc() {
-
+    goToPage(url) {
+      var win = window.open(url, '_blank');
+      win.focus();
     }
   }
 
