@@ -1,0 +1,18 @@
+<div id="wiki-index" class="page-content-container">
+  <cc-header data-title="Search Wikipedia">
+    <span flex></span>
+  </cc-header>
+  <div layout="column" layout-align="start center">
+    <h1>Search</h1>
+    <div class="spacetop-2">
+      <input type="text" ng-model="vm.searchText" />
+    </div>
+    <div>
+      <list-container ng-repeat="item in vm.results" title="{{item.title}}" extract="{{item.extract}}" src-link="{{srcLink}}">
+      </list-container>
+    </div>
+    <p class="spacetop-2" flex>
+      {{vm.results}}
+    </p>
+  </div>
+</div>

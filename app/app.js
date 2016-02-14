@@ -16,12 +16,14 @@
   require('slipjs');
   require('angular-slip');
   require('jquery-sticky');
+  require('rx');
+  require('rx-angular');
   require('./config/ngConstants.js');
 
 
 
   const ngModule = angular.module('ccApp', ['ui.router', 'ngMaterial', 'ngMdIcons', 'ngResource', 'ngSanitize',
-      'ngMessages', 'ngAria', 'slip', 'ccApp.constants']);
+      'ngMessages', 'ngAria', 'slip', 'ccApp.constants', 'rx', 'wikiService']);
 
   ngModule
     .config(function($stateProvider, $urlRouterProvider, $locationProvider, $logProvider,
@@ -111,6 +113,23 @@
                 toolbarClass: "artists",
                 rootState: true
             }
+          })
+          .state('searchWiki', {
+            url: '/search',
+            views: {
+              '': {
+                templateUrl: 'partials/searchWiki/index.html',
+                controller: 'searchWikiController as vm'
+              },
+              'navbar': {
+                templateUrl: 'partials/nav/index.html',
+                controller: 'sideNavController as nav'
+              }
+            },
+            data: {
+                toolbarClass: "search",
+                rootState: true
+            }
           });
         /* END UI ROUTER STATES */
     });
@@ -158,12 +177,15 @@
     require('./components/header')(ngModule);
     require('./components/customValidation')(ngModule);
     require('./components/contentTile')(ngModule);
+    require('./components/listContainer')(ngModule);
     require('./components/shared/ccUtils')(ngModule);
     require('./components/shared/user')(ngModule);
+    require('./components/shared/wiki/index.js');
     require('./partials/home')(ngModule);
     require('./partials/aboutUs')(ngModule);
     require('./partials/artists')(ngModule);
     require('./partials/nav')(ngModule);
     require('./partials/dialogs')(ngModule);
+    require('./partials/searchWiki')(ngModule);
 
 })();
