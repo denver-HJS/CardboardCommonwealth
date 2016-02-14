@@ -14,7 +14,7 @@ export default ngModule =>
       this.results = []
 
       observeOnScope($scope, 'vm.searchText')
-      .throttle(500)
+      .debounce(300)
       .map((change) => {return change.newValue})
       .filter((w) => { return w && w !== "" })
       .flatMapLatest(this.wikiSearch.searchWikipedia.bind(this.wikiSearch))
